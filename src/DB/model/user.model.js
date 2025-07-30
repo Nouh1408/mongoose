@@ -6,4 +6,4 @@ const schema = new Schema({
     password:String
 },{})
 //model
-export const User = model("User", schema)
+export  const User = model("User", schema)
