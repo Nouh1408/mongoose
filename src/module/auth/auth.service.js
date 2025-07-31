@@ -1,5 +1,5 @@
-import { User } from "../../DB/model/user.model.js";
-export const register = async (req, res) => {
+import {User}  from "../../DB/model/user.model.js";
+export const register = async (req, res,next) => {
   try {
     //get data from request
     const { username, email, password, phonenumber } = req.body;
@@ -12,7 +12,7 @@ export const register = async (req, res) => {
       username,
       email,
       password,
-      phonenumber: phone,
+      phonenumber
     });
     return res.status(201).json({message:"User created Successfully", succes:false, data:createdUser})
   } catch (error) {
