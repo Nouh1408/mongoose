@@ -3,7 +3,11 @@ import mongoose from "mongoose";
 
 //schema
 const schema = new Schema({
-    username: String,
+    username: {
+        type: String,
+        required: true,
+        minlength: 3
+    },
     email:String,
     password:String,
     phonenumber:String
